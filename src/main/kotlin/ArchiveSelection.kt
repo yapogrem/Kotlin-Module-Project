@@ -1,7 +1,7 @@
 
 
 class ArchiveSelection() {
-    fun showstartMenu(archiveList: MutableList<String>) {
+    fun showStartMenu(archiveList: MutableList<String>) {
         println("Список архивов:")
         for (name in archiveList){
             println(name)

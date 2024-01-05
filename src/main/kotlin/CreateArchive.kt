@@ -8,7 +8,7 @@ class CreateArchive() {
 
         if(inputName in archiveList){
             println("Архив с таким именем уже существует")
-            ArchiveSelection().showstartMenu(archiveList)
+            ArchiveSelection().showStartMenu(archiveList)
         }else{
             archiveList.add(inputName)
             val note = Note("Список заметок:", "Текст Заметки")
