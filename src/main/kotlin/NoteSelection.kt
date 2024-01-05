@@ -34,7 +34,7 @@ class NoteSelection {
                 NoteSelection().noteMenu(archive)
 
                     }
-            2 -> ArchiveSelection().showstartMenu()
+            2 -> ArchiveSelection().showstartMenu(archiveList)
             else -> println("x!=2")
         }
     }
