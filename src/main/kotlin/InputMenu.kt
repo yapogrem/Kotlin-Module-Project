@@ -1,7 +1,7 @@
 import java.util.Scanner
 
 
-class Navigation {
+class InputMenu {
     fun choice_Menu(): Int {
         var i = 10
         while (i > 2) {

@@ -1,5 +1,5 @@
-class Note(val id: Int, val text: String) {
+class Note(val noteName: String, val noteText: String) {
     fun displayText() {
-        println(text)
+        println(noteText)
     }
 }
