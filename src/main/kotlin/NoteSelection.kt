@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.*
 
 class NoteSelection {
     fun noteMenu(archive: Archive) {
@@ -16,25 +16,26 @@ class NoteSelection {
                 val inputName = Scanner(System.`in`).nextLine()
                 if (archive.notes.stream().filter { x -> x.noteName == inputName }.findFirst().isPresent) {
                     println("Заметка с таким именем уже существует")
-                }else{
-                val note = CreateNote().createNotes(inputName)
-                archive.notes.add(note)
-                NoteSelection().noteMenu(archive)
-//                ArchiveSelection().archiveSelection(archiveList)
+                } else {
+                    val note = CreateNote().createNotes(inputName)
+                    archive.notes.add(note)
+                    NoteSelection().noteMenu(archive)
                 }
             }
+
             1 -> {
                 println("Введите имя заметки")
                 val inputName = Scanner(System.`in`).nextLine()
                 if (archive.notes.stream().filter { x -> x.noteName == inputName }.findFirst().isEmpty) {
                     println("Заметки с таким именем не существует")
-                }else{
-                    for (note in archive.notes.stream().filter{x -> x.noteName == inputName}) {
+                } else {
+                    for (note in archive.notes.stream().filter { x -> x.noteName == inputName }) {
                         println(note.noteText)
                     }
                     NoteSelection().noteMenu(archive)
                 }
             }
+
             2 -> ArchiveMenu().showStartMenu(archiveList)
         }
     }
