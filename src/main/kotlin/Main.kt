@@ -1,4 +1,4 @@
-//val archiveList: MutableList<String> = mutableListOf()
+
 val archiveList:MutableList<Archive> = ArrayList()
 fun main(args: Array<String>) {
 
