@@ -4,7 +4,7 @@ class CreateArchive() {
     fun createArchive(archiveList: MutableList<Archive>) {
         println("Введите имя архива:")
 
-        val inputName = Scanner(System.`in`).nextLine()
+        val inputName = CheckInputNote().checkInputNote()
 
         if(inputName in archiveList.stream().map { x -> x.archiveName}.toList()){
             println("Архив с таким именем уже существует")
