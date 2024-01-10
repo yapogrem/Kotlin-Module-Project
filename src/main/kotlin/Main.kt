@@ -1,3 +1,4 @@
+val archiveList: MutableList<Archive> = ArrayList()
 fun main(args: Array<String>) {
-    println("Hello World!")
+    ArchiveMenu().showStartMenu(archiveList)
 }
