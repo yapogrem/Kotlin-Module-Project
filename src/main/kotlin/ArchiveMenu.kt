@@ -1,4 +1,4 @@
-class ArchiveMenu() {
+class ArchiveMenu {
     fun showStartMenu(archiveList: MutableList<Archive>) {
         println("Список архивов:")
         for (archiveName in archiveList.stream().map { x -> x.archiveName }.toList()) {

@@ -1,12 +1,10 @@
-import java.util.Scanner
-
-class CreateNote() {
+class CreateNote {
     fun createNotes(inputName: String): Note {
-            println("Введите текст заметки:")
-            val inputText = Scanner(System.`in`).nextLine()
-            val note = Note(inputName, inputText)
-            println("Создана заметка $inputName")
-            return note
-        }
+        println("Введите текст заметки:")
+        val inputText = CheckInputNote().checkInputNote()
+        val note = Note(inputName, inputText)
+        println("Создана заметка $inputName")
+        return note
     }
+}
 

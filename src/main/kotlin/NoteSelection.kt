@@ -1,5 +1,3 @@
-import java.util.*
-
 class NoteSelection {
     fun noteMenu(archive: Archive) {
         for ((index, note) in archive.notes.withIndex()) {
@@ -13,7 +11,7 @@ class NoteSelection {
         when (input) {
             0 -> {
                 println("Введите имя заметки:")
-                val inputName = Scanner(System.`in`).nextLine()
+                val inputName = CheckInputNote().checkInputNote()
                 if (archive.notes.stream().filter { x -> x.noteName == inputName }.findFirst().isPresent) {
                     println("Заметка с таким именем уже существует")
                 } else {
@@ -25,7 +23,7 @@ class NoteSelection {
 
             1 -> {
                 println("Введите имя заметки")
-                val inputName = Scanner(System.`in`).nextLine()
+                val inputName = CheckInputNote().checkInputNote()
                 if (archive.notes.stream().filter { x -> x.noteName == inputName }.findFirst().isEmpty) {
                     println("Заметки с таким именем не существует")
                 } else {

@@ -1,5 +1,1 @@
-
-
-class Archive(val archiveName: String, val notes: MutableList<Note>) {
-
-}
+class Archive(val archiveName: String, val notes: MutableList<Note>)
